@@ -404,7 +404,7 @@
         <!-- APP HEADER -->
         <header class="app-header">
             <h1>Dashboard</h1>
-            <div class="balance-chip">Balance: ৳<span id="user-balance">0</span></div>
+            <div class="balance-chip">Balance: SHIB COIN 🪙<span id="user-balance">0</span></div>
         </header>
 
         <!-- MAIN CONTENT VIEWS -->
@@ -455,7 +455,7 @@
                      <div class="card">
                         <h2>Request a Withdrawal</h2>
                         <div class="info-box">
-                            Minimum withdrawal is ৳<span id="min-withdrawal">...</span>. Requests are processed within 24 hours.
+                            Minimum withdrawal is SHIB COIN 🪙<span id="min-withdrawal">...</span>. Requests are processed within 24 hours.
                         </div>
                         <form id="withdraw-form">
                              <div class="form-group">
@@ -763,7 +763,7 @@
                         html += `
                             <div class="history-list-item">
                                 <span>${data.userNumber.slice(0, 3)}****${data.userNumber.slice(-4)}</span>
-                                <strong>৳${data.amount}</strong>
+                                <strong>SHIB COIN 🪙${data.amount}</strong>
                             </div>
                         `;
                     });
@@ -838,7 +838,7 @@
             const userNumber = document.getElementById('withdraw-user-number').value;
 
             if (isNaN(amount) || amount < appSettings.minWithdrawal) {
-                return showToast(`Minimum withdrawal is ৳${appSettings.minWithdrawal}.`, 'error');
+                return showToast(`Minimum withdrawal is SHIB COIN 🪙${appSettings.minWithdrawal}.`, 'error');
             }
             if (amount > currentUser.balance) {
                 return showToast('Insufficient balance.', 'error');
@@ -980,7 +980,7 @@
                     answeredQuestions: firebase.firestore.FieldValue.arrayUnion(questionId)
                 });
 
-                showToast(isCorrect? `+৳${winAmount} Correct!` : `-৳${losePenalty} Wrong!`, isCorrect? 'success' : 'error');
+                showToast(isCorrect? `+SHIB COIN 🪙${winAmount} Correct!` : `-SHIB COIN 🪙${losePenalty} Wrong!`, isCorrect? 'success' : 'error');
             } catch (error) {
                 console.error("Error updating balance:", error);
                 showToast('Error updating balance.', 'error');
